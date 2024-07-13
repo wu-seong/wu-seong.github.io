@@ -12,7 +12,7 @@ tags: [공부 정리]		# TAG는 반드시 소문자로 이루어져야함!
 - **CPU Utilization을 극대화**하기 위해서는 CPU가 **노는 시간이 없도록** 해야함
 - CPU burst Process와 I/O burst Process가 번갈아 가며 실행됨
 
-![](https://velog.velcdn.com/images/jws1228/post/5b3ec1d8-6bd3-45ce-8bb0-b2962c3062ed/image.png)
+![burst duration에 따른 빈도수 그래프](https://velog.velcdn.com/images/jws1228/post/5b3ec1d8-6bd3-45ce-8bb0-b2962c3062ed/image.png)
 <p align="center" style=" font-size: 12px;
 color: #999;">burst duration에 따른 빈도수 그래프</p>
 
@@ -46,7 +46,7 @@ color: #999;">burst duration에 따른 빈도수 그래프</p>
 ## Scheduling 알고리즘
 
 ### FCFS(First-Come, First-Served)
-![](https://velog.velcdn.com/images/jws1228/post/d1cdb0df-dee7-4c90-ac6f-f1f2b8a9d106/image.png)
+![FCFS](https://velog.velcdn.com/images/jws1228/post/d1cdb0df-dee7-4c90-ac6f-f1f2b8a9d106/image.png)
 <p align="center" style=" font-size: 12px;
 color: #999;">FCFS</p>
 
@@ -57,7 +57,7 @@ color: #999;">FCFS</p>
 **convoy effect: **긴 실행시간을 가진 작업이 다른 짧은 실행 시간을 가진 작업을 block시키는 것
 <br><br>
 ### SJF(Shortest-Job-First)
-![](https://velog.velcdn.com/images/jws1228/post/d21bc4d5-1282-4be1-9598-89efa62f2408/image.png)<p align="center" style=" font-size: 12px;
+![SJF](https://velog.velcdn.com/images/jws1228/post/d21bc4d5-1282-4be1-9598-89efa62f2408/image.png)<p align="center" style=" font-size: 12px;
 color: #999;">SJF</p>
 
 - 실행시간(CPU burst time)이 짧은 순으로 실행
@@ -77,7 +77,7 @@ color: #999;">SJF</p>
 
 => 따라서 적당한 time quantum size가 필요하다
 
-![](https://velog.velcdn.com/images/jws1228/post/8e8b5ec2-c69a-4e45-9a62-f41973820ac4/image.png)
+![time quantum = 4 인 RR](https://velog.velcdn.com/images/jws1228/post/8e8b5ec2-c69a-4e45-9a62-f41973820ac4/image.png)
 <p align="center" style=" font-size: 12px;
 color: #999;">time quantum = 4 인 RR</p>
 
@@ -98,18 +98,18 @@ color: #999;">time quantum = 4 인 RR</p>
 배울 때는 같은 우선순위만 RR을 적용하는 것이었는데 시험문제에서는 같은 우선순위인 것이 없는 채로 RR을 결합한 문제 나왔고 따로 명시가 되어있지 않은채로 헷갈리게 나왔다.
 _~~
 이에 대해 GPT에게 물어보니
-![](https://velog.velcdn.com/images/jws1228/post/e58e840a-e50b-4c4b-9e03-44587839f749/image.png)
+![GPT 질문](https://velog.velcdn.com/images/jws1228/post/e58e840a-e50b-4c4b-9e03-44587839f749/image.png)
 
 그런데 이방법을 사용하는 이유 자체가 starvation을 줄이기 위해서 였는데 같은 우선순위에서만 적용하면 starvation문제가 여전히 해결되지 않는 것 같아 다시 물어봤더니
 
-![](https://velog.velcdn.com/images/jws1228/post/cf3f130a-a654-442c-96e8-a1050a4dd05c/image.png)
+![GPT 질문2](https://velog.velcdn.com/images/jws1228/post/cf3f130a-a654-442c-96e8-a1050a4dd05c/image.png)
 라고한다.
 
 결론적으로,
 **priority와 RR의 결합**은 일반적으로는 **같은 우선순위에 대해서만 RR**을 적용시키고 추가적으로 aging알고리즘도 함께 결합하여 starvation을 해결할 수 있다고 보면 될 것 같다.
 
 ### Multilevel Queue
-![](https://velog.velcdn.com/images/jws1228/post/c141f8b2-b0d5-4772-ab57-5ef0c70c9751/image.png)
+![multilevel queue](https://velog.velcdn.com/images/jws1228/post/c141f8b2-b0d5-4772-ab57-5ef0c70c9751/image.png)
 <p align="center" style=" font-size: 12px;
 color: #999;">multilevel queue</p>
 

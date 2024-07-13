@@ -24,7 +24,7 @@ tags: [공부 정리]		# TAG는 반드시 소문자로 이루어져야함!
 - code section
 - data section
 - OS resources(open files and signals)
-![](https://velog.velcdn.com/images/jws1228/post/924742cf-f557-453c-9a01-443762f77840/image.png)
+![싱글쓰레드와 멀티 스레드 구조](https://velog.velcdn.com/images/jws1228/post/924742cf-f557-453c-9a01-443762f77840/image.png)
 <p align="center" style=" font-size: 12px;
 color: #999;">싱글쓰레드와 멀티 스레드 구조</p>
 
@@ -44,7 +44,7 @@ color: #999;">싱글쓰레드와 멀티 스레드 구조</p>
 \- multihreaded programming은 multicore나 multiprocessor 활용하여 동시성을 높인다(improve concurrency)
 
 #### concurrecny vs parallelism
-![](https://velog.velcdn.com/images/jws1228/post/e7b66ea3-5fed-46ef-870d-d7e0e994d0ec/image.png)
+![concurrecny vs parallelism](https://velog.velcdn.com/images/jws1228/post/e7b66ea3-5fed-46ef-870d-d7e0e994d0ec/image.png)
 
 
 **concurrency**: 여러개의 일이 동시에 진행되는 것
@@ -63,7 +63,7 @@ color: #999;">싱글쓰레드와 멀티 스레드 구조</p>
 5. 테스트와 디버깅(여러 변수가 많음)
 
 ### Types of Parallelism
-![](https://velog.velcdn.com/images/jws1228/post/e480c5f6-8e03-4301-97c9-c9e9f82c5467/image.png)
+![Types of Parallelism](https://velog.velcdn.com/images/jws1228/post/e480c5f6-8e03-4301-97c9-c9e9f82c5467/image.png)
 
 #### Data parallelism
 - 여러 데이터에 동일한 작업을 할 때 데이터 부분을 나누어 병렬적으로 처리
@@ -75,12 +75,12 @@ color: #999;">싱글쓰레드와 멀티 스레드 구조</p>
 ### Amdahl's Law
 - 칩을 추가하여 **병렬 처리성을 아무리 높여도** 순차적으로 실행되어야 하는 부분이 있기 때문에 **성능이 높아지는데는 한계**가 있다
 
-![](https://velog.velcdn.com/images/jws1228/post/a8b44f69-0334-44d9-b274-0821baa7f482/image.png)
+![speedUp-Chip 그래프](https://velog.velcdn.com/images/jws1228/post/a8b44f69-0334-44d9-b274-0821baa7f482/image.png)
 <p align="center" style=" font-size: 12px;
 color: #999;">speedUp-Chip 그래프</p>
 
 -> 50%이면 성능이 아무리 증가해도 2배에 수렴
-![](https://velog.velcdn.com/images/jws1228/post/8df3f168-bc49-4115-a198-36f9f7f8c730/image.png)
+![Amdahl's Law](https://velog.velcdn.com/images/jws1228/post/8df3f168-bc49-4115-a198-36f9f7f8c730/image.png)
 <p align="center" style=" font-size: 12px;
 color: #999;">Amdahl's Law</p>
 
@@ -95,7 +95,7 @@ color: #999;">Amdahl's Law</p>
 -  운영체제가 커널 스레드를 관리하기 때문에 스레드의 생성, 스케줄링, 동기화, 자원 할당 등의 관리를 효율적으로 수행할 수 있다
 
 ### Many-to-One
-![](https://velog.velcdn.com/images/jws1228/post/0b8b5248-db5e-490c-8bb3-b1deafb1b518/image.png)
+![many-to-one](https://velog.velcdn.com/images/jws1228/post/0b8b5248-db5e-490c-8bb3-b1deafb1b518/image.png)
 
 - 여러개의 user thread가 하나의 kernel thread에 매핑
 - 하나의 kernel thread 에 **의존적**이다
@@ -103,7 +103,7 @@ color: #999;">Amdahl's Law</p>
 <br>
 
 ### One-to-One
-![](https://velog.velcdn.com/images/jws1228/post/971319be-201e-4907-84ec-bb5453e55019/image.png)
+![one-to-one](https://velog.velcdn.com/images/jws1228/post/971319be-201e-4907-84ec-bb5453e55019/image.png)
 
 - 각각의 user thread와 kernel thread가 1:1로 매핑
 - 동시성(concurrency)가 높아진다.
@@ -111,7 +111,7 @@ color: #999;">Amdahl's Law</p>
 - 프로세스 당 **스레드의 수**가 **제한될 수** 있다.
 <br>
 ### Many-to-Many
-![](https://velog.velcdn.com/images/jws1228/post/81cb5304-3b89-403b-aa76-6bdbd68ea3d6/image.png)
+![many-to-many](https://velog.velcdn.com/images/jws1228/post/81cb5304-3b89-403b-aa76-6bdbd68ea3d6/image.png)
 
 - user thread 수와 같거나 더 작은 kernel thread가 매핑 되어있다
 - kernel thread **자원을 아낄 수** 있다.
@@ -121,7 +121,7 @@ color: #999;">Amdahl's Law</p>
 <br>
 
 ### Two-level 
-![](https://velog.velcdn.com/images/jws1228/post/6673bb61-1f3c-4248-b866-e65cc90cc2c3/image.png)
+![two-level](https://velog.velcdn.com/images/jws1228/post/6673bb61-1f3c-4248-b866-e65cc90cc2c3/image.png)
 
 - **many-to-many의 변형**으로 ono-to-one과 many-to-many를 합쳐 놓음
 - **중요한 작업**은 **ono-to-one**으로 처리
@@ -153,7 +153,7 @@ color: #999;">Amdahl's Law</p>
 #### Deferred Cancellation
 - target thread에게 스스로 종료할 수 있을 때 종료하도록 명령
 
-![](https://velog.velcdn.com/images/jws1228/post/137ecb34-0c02-456e-a8b9-f740d33fee1b/image.png)
+![Tread Cancellation 표](https://velog.velcdn.com/images/jws1228/post/137ecb34-0c02-456e-a8b9-f740d33fee1b/image.png)
 <p align="center" style=" font-size: 12px;
 color: #999;">Thread Cancellation 표</p>
 
@@ -172,7 +172,7 @@ color: #999;">Thread Cancellation 표</p>
 
 \- Many-to-many, Two-level model은 스레드간 매핑이 유동적이다. 이 매핑은 중간에 LWP가 관리하여 적절하게 커널 스레드가 유지되도록 한다.
 
-![](https://velog.velcdn.com/images/jws1228/post/58739a94-27e6-49a2-a668-4ddfe361a37f/image.png)
+![LWP의 위치](https://velog.velcdn.com/images/jws1228/post/58739a94-27e6-49a2-a668-4ddfe361a37f/image.png)
 <p align="center" style=" font-size: 12px;
 color: #999;">LWP의 위치</p>
 

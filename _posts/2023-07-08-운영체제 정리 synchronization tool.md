@@ -15,15 +15,15 @@ tags: [공부 정리]		# TAG는 반드시 소문자로 이루어져야함!
 ### Race Condition
 \- Producer-Consumer Problem에서 Producer는** counter++**을 하고 Consumer는 **counter--**를 하여 동시에 counter에 접근하여 값을 변경시킬 수 있는데 이때 **데이터의 불일치**가 나타난다
 
-![](https://velog.velcdn.com/images/jws1228/post/b55d2ca8-9412-4f7d-9407-7d46d941d79d/image.png)
+![counter++의 동작](https://velog.velcdn.com/images/jws1228/post/b55d2ca8-9412-4f7d-9407-7d46d941d79d/image.png)
 <p align="center" style=" font-size: 12px;
 color: #999;">counter++의 동작</p>
 
-![](https://velog.velcdn.com/images/jws1228/post/0787470b-20c8-4bb2-a715-c899d32d500a/image.png)
+![counter--의 동작](https://velog.velcdn.com/images/jws1228/post/0787470b-20c8-4bb2-a715-c899d32d500a/image.png)
 <p align="center" style=" font-size: 12px;
 color: #999;">counter--의 동작</p>
 
-![](https://velog.velcdn.com/images/jws1228/post/e2570777-68d6-404f-99bb-78d44d32b4f6/image.png)
+![데이터 불일치 문제](https://velog.velcdn.com/images/jws1228/post/e2570777-68d6-404f-99bb-78d44d32b4f6/image.png)
 <p align="center" style=" font-size: 12px;
 color: #999;">동시에 일어났을 때의 데이터 불일치 문제</p>
 
@@ -55,7 +55,7 @@ color: #999;">동시에 일어났을 때의 데이터 불일치 문제</p>
 - flag[]: 진입 요청 플래그
 - turn: 현재 진입할 프로세스
 
-![](https://velog.velcdn.com/images/jws1228/post/1caecad8-0332-4dce-8502-140a62ba457f/image.png)
+![peterson's Solution](https://velog.velcdn.com/images/jws1228/post/1caecad8-0332-4dce-8502-140a62ba457f/image.png)
 <p align="center" style=" font-size: 12px;
 color: #999;">Peterson's Solution</p>
 
@@ -65,7 +65,7 @@ color: #999;">Peterson's Solution</p>
 
 ### 문제점
 \- 현대 컴퓨터에서는 성능을 위해 코드의 순서가 바뀔 수 있기 때문에 동시에 진입하여 **mutual exclusion이 보장되지 않는다.**
-![](https://velog.velcdn.com/images/jws1228/post/68ae187b-8569-4822-9900-db6e3b7a0143/image.png)
+![cs 동시 진입 예시](https://velog.velcdn.com/images/jws1228/post/68ae187b-8569-4822-9900-db6e3b7a0143/image.png)
 <p align="center" style=" font-size: 12px;
 color: #999;">Peterson's Solution의 순서가 바뀐 예시: cs에 동시에 진입</p>
 <br><br>
@@ -77,7 +77,7 @@ color: #999;">Peterson's Solution의 순서가 바뀐 예시: cs에 동시에 �
 \- 앞에서 봤듯 코드의 현대의 컴퓨터는 순서가 보장되지 않기 때문에 **이 순서를 보장해줄 3가지 하드웨어적인 해결방법**이 있다.
 
 ### Memory Barries
-![](https://velog.velcdn.com/images/jws1228/post/68c4d5d0-bd7f-4386-8435-bfd25e7a6fae/image.png)
+![Memory Barries](https://velog.velcdn.com/images/jws1228/post/68c4d5d0-bd7f-4386-8435-bfd25e7a6fae/image.png)
 <p align="center" style=" font-size: 12px;
 color: #999;">Memory Barries</p>
 
@@ -87,14 +87,14 @@ color: #999;">Memory Barries</p>
 
 \- 하드웨어의 지원으로 원자적으로 실행되도록 하는 lock 명령어들
 #### test_and_set(TAS)
-![](https://velog.velcdn.com/images/jws1228/post/d21901ce-98a1-4cf3-8efc-a12606259e49/image.png)
+![TAS 코드](https://velog.velcdn.com/images/jws1228/post/d21901ce-98a1-4cf3-8efc-a12606259e49/image.png)
 <p align="center" style=" font-size: 12px;
 color: #999;">TAS 코드</p>
 
 - target이 false 일때 들어오면서 target= true로 바꿈 반환은 false
 - target이 true라면 true를 유지
 
-![](https://velog.velcdn.com/images/jws1228/post/631af6bc-f10f-49ce-bef4-8e2ab811f3ed/image.png)
+![TAS를 이용한 Lock](https://velog.velcdn.com/images/jws1228/post/631af6bc-f10f-49ce-bef4-8e2ab811f3ed/image.png)
 <p align="center" style=" font-size: 12px;
 color: #999;">TAS를 이용한 Lock</p>
 
@@ -105,12 +105,12 @@ color: #999;">TAS를 이용한 Lock</p>
 
 #### compare_and_swap(CAS)
 
-![](https://velog.velcdn.com/images/jws1228/post/79587c48-0df9-4f02-ae5a-b4f6fbe161f2/image.png)
+![CAS 코드](https://velog.velcdn.com/images/jws1228/post/79587c48-0df9-4f02-ae5a-b4f6fbe161f2/image.png)
 <p align="center" style=" font-size: 12px;
 color: #999;">CAS 코드</p>
 
 - TAS 유사하지만 target이 boolean이 아니라 int임
-![](https://velog.velcdn.com/images/jws1228/post/088aa704-e726-4613-ba7c-04bead77b8b9/image.png)
+![CAS를 이용한 Lock](https://velog.velcdn.com/images/jws1228/post/088aa704-e726-4613-ba7c-04bead77b8b9/image.png)
 <p align="center" style=" font-size: 12px;
 color: #999;">CAS를 이용한 Lock</p>
 - lock이 not expect이면 CS에 진입을 못함
@@ -121,7 +121,7 @@ color: #999;">CAS를 이용한 Lock</p>
 ### Atomic Variables
 
 
-![](https://velog.velcdn.com/images/jws1228/post/8cdf951a-b817-4cf8-8e4b-5ffc354cfc38/image.png)
+![Atomic variable](https://velog.velcdn.com/images/jws1228/post/8cdf951a-b817-4cf8-8e4b-5ffc354cfc38/image.png)
 <p align="center" style=" font-size: 12px;
 color: #999;">Atomic variable</p>
 
@@ -136,7 +136,7 @@ color: #999;">Atomic variable</p>
 - **acquire()과 release()** 명령어를 사용하여 lock을 제어한다
 - 이 명령어들은 **atomic**해야하고 보통 내부적으로 **CAS**로 구현되어있다
 
-![](https://velog.velcdn.com/images/jws1228/post/6f4695c2-cd84-42db-bf2e-ef09eb88e2ad/image.png)
+![acquire, release 코드](https://velog.velcdn.com/images/jws1228/post/6f4695c2-cd84-42db-bf2e-ef09eb88e2ad/image.png)
 <p align="center" style=" font-size: 12px;
 color: #999;">acquire, release 코드</p>
 <br><br>
@@ -148,7 +148,7 @@ color: #999;">acquire, release 코드</p>
 - integer 변수이고 오직 아래 두 명령어를 이용하여 접근할 수 잇다
 - wait()와 signal() 명령어를 사용하여 제어
 
-![](https://velog.velcdn.com/images/jws1228/post/0e4cc154-19ba-48ab-887e-e0a9d89775b7/image.png)
+![wait와 signal 코드](https://velog.velcdn.com/images/jws1228/post/0e4cc154-19ba-48ab-887e-e0a9d89775b7/image.png)
 <p align="center" style=" font-size: 12px;
 color: #999;">wait와 signal 코드</p>
 
@@ -162,13 +162,13 @@ color: #999;">wait와 signal 코드</p>
 - sleep()과 wakeup() 명령을 통해 waiting queue와 ready queue에 넣고 뺄 수 있다.
 - **critical section이 짧다면** **busy waiting**도 길지 않기 때문에 **고려해볼 옵션**이다, 오히려 대기열을 사용하지 않아 더 효율적일 수 있다.
 
-![](https://velog.velcdn.com/images/jws1228/post/e2687cdd-59b3-489b-92a1-33b73c14a3de/image.png)
+![wait 코드 with no Busy Waiting](https://velog.velcdn.com/images/jws1228/post/e2687cdd-59b3-489b-92a1-33b73c14a3de/image.png)
 <p align="center" style=" font-size: 12px;
 color: #999;">wait 코드 with no Busy Waiting </p>
 
 \- 먼저 value 값을 줄이고 0보다 작으면 waiting queue에 둠(sleep)
 
-![](https://velog.velcdn.com/images/jws1228/post/ad303d2c-a4c7-4865-95f5-602bfdca1df9/image.png)
+![signal 코드 with no Busy Waiting](https://velog.velcdn.com/images/jws1228/post/ad303d2c-a4c7-4865-95f5-602bfdca1df9/image.png)
 <p align="center" style=" font-size: 12px;
 color: #999;">signal 코드 with no Busy Waiting </p>
 
@@ -184,11 +184,11 @@ color: #999;">signal 코드 with no Busy Waiting </p>
 ## Monitors
 \- 앞의 주의점을 지키지 않고 사용한다면 error가 발생할 수 있기 때문에 이를 관리하기 위해 고급언어에서 지원하는 도구
 
-![](https://velog.velcdn.com/images/jws1228/post/6684583b-8f7a-4570-9bd3-3de7ca41d7f7/image.png)
+![wait와 signal을 잘못 사용한 예시](https://velog.velcdn.com/images/jws1228/post/6684583b-8f7a-4570-9bd3-3de7ca41d7f7/image.png)
 <p align="center" style=" font-size: 12px;
 color: #999;">wait와 signal을 잘못 사용한 예시</p>
 
-![](https://velog.velcdn.com/images/jws1228/post/244bf49d-e021-4961-8480-e68c6f3b5c99/image.png)
+![Monitor 구조](https://velog.velcdn.com/images/jws1228/post/244bf49d-e021-4961-8480-e68c6f3b5c99/image.png)
 <p align="center" style=" font-size: 12px;
 color: #999;">Monitor 구조</p>
 
@@ -197,7 +197,8 @@ color: #999;">Monitor 구조</p>
 - 오직 하나의 프로세스만 실행되는 것이 보장된다
 <br><br>
 ### Condition Variables
-![](https://velog.velcdn.com/images/jws1228/post/012a0159-f4de-4676-b2fb-c2c8c68f6fa4/image.png)
+
+![condition Variables](https://velog.velcdn.com/images/jws1228/post/012a0159-f4de-4676-b2fb-c2c8c68f6fa4/image.png)
 
 \- 조건변수를 설명하기 위해 producer-consumer를 예시로 들자면
 
@@ -208,12 +209,12 @@ x.signal() => 생산자가 진입하여 내부에서 대기하는 소비자가 �
 <br><br>
 
 ### Semaphore를 이용한 Monitor 구현
-![](https://velog.velcdn.com/images/jws1228/post/feeca3f4-18d1-4e09-8ced-c66a9016d1ad/image.png)
+![Monitor의 함수 내부 구현](https://velog.velcdn.com/images/jws1228/post/feeca3f4-18d1-4e09-8ced-c66a9016d1ad/image.png)
 
 <p align="center" style=" font-size: 12px;
 color: #999;">Monitor의 함수 내부 구현</p>
 
-![](https://velog.velcdn.com/images/jws1228/post/e4e4d8c1-ab66-4cf5-b438-eb96f4c15a16/image.png)
+![Monitor의 condition wait와 signal구현](https://velog.velcdn.com/images/jws1228/post/e4e4d8c1-ab66-4cf5-b438-eb96f4c15a16/image.png)
 <p align="center" style=" font-size: 12px;
 color: #999;">Monitor의 condition wait와 signal구현</p>
 

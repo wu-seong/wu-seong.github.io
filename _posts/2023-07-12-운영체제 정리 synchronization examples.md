@@ -16,7 +16,7 @@ tags: [공부 정리]		# TAG는 반드시 소문자로 이루어져야함!
 
 [Process 정리 보기](https://velog.io/@jws1228/운영체제-정리-Processes)
 
-![](https://velog.velcdn.com/images/jws1228/post/0accfac7-4189-4c18-9652-869e61b8b4d6/image.png)
+![세마포어 변수](https://velog.velcdn.com/images/jws1228/post/0accfac7-4189-4c18-9652-869e61b8b4d6/image.png)
 <p align="center" style=" font-size: 12px;
 color: #999;">Bounded-Buffer Problem에 필요한 변수</p>
 
@@ -24,12 +24,13 @@ color: #999;">Bounded-Buffer Problem에 필요한 변수</p>
 - 생산자가 남은 공간일 때만 진입할 수 있게 하는 세마포어 **full**
 - 소비자가 소비할 것이 있을때만 진입할 수 있게 하는 세마포어 **empty**
 <br><br>
-![](https://velog.velcdn.com/images/jws1228/post/cf9263eb-ebed-4421-9152-64b220bd258a/image.png)
+
+![생산자 코드](https://velog.velcdn.com/images/jws1228/post/cf9263eb-ebed-4421-9152-64b220bd258a/image.png)
 <p align="center" style=" font-size: 12px;
 color: #999;">생산자 코드</p>
 
 
-![](https://velog.velcdn.com/images/jws1228/post/301570e6-32b6-4297-add9-534e344a1777/image.png)
+![소비자 코드](https://velog.velcdn.com/images/jws1228/post/301570e6-32b6-4297-add9-534e344a1777/image.png)
 <p align="center" style=" font-size: 12px;
 color: #999;">소비자 코드</p>
 
@@ -45,11 +46,11 @@ color: #999;">소비자 코드</p>
 - read_count의 증감을 관리하는 세마포어인 mutex
 
 
-![](https://velog.velcdn.com/images/jws1228/post/bcc1fe61-7810-437d-8133-6888a44420a5/image.png)
+![writer 코드](https://velog.velcdn.com/images/jws1228/post/bcc1fe61-7810-437d-8133-6888a44420a5/image.png)
 <p align="center" style=" font-size: 12px;
 color: #999;">writer 코드</p>
 
-![](https://velog.velcdn.com/images/jws1228/post/01ac4cdd-f8f5-41d7-93d3-04d6bb612567/image.png)
+![reader 코드](https://velog.velcdn.com/images/jws1228/post/01ac4cdd-f8f5-41d7-93d3-04d6bb612567/image.png)
 <p align="center" style=" font-size: 12px;
 color: #999;">reader 코드</p>
 
@@ -59,10 +60,10 @@ color: #999;">reader 코드</p>
 - 이 때 글 작성은 첫번째 reader만 확인하면되고, 모든 글을 읽었는지는 남은 reader를 확인하면 되니, 이를 나타내기위해 **read_count**를 사용한 것
 <br><br>
 ### Dining-Philosophers Problem
-![](https://velog.velcdn.com/images/jws1228/post/0e5b90f6-fec3-41ce-909d-b76f71c87391/image.png)
+![철학자 문제](https://velog.velcdn.com/images/jws1228/post/0e5b90f6-fec3-41ce-909d-b76f71c87391/image.png)
 \- 철학자 5명이 원탁에 둘러 앉아 저녁을 먹는상황, 두 젓가락이 모두 있어야 밥을 먹을 수 있고 젓가락은 각자 1개씩 양 옆에 있음
 
-![](https://velog.velcdn.com/images/jws1228/post/7cf34816-9c02-4b9f-b5a6-d277d6e68fbc/image.png)
+![semaphore를 이용한 방법](https://velog.velcdn.com/images/jws1228/post/7cf34816-9c02-4b9f-b5a6-d277d6e68fbc/image.png)
 <p align="center" style=" font-size: 12px;
 color: #999;">semaphore를 이용한 방법</p>
 
@@ -77,7 +78,7 @@ color: #999;">semaphore를 이용한 방법</p>
 \- 아래에서는 THIKING, EATING 이외에 HUNGRY 상태를 추가하여 두 젓가락 모두 잡을 수 있을 때만 잡도록 하였다. 
  => 두 젓가락을 집는 것을 하나의 원자적인 행동으로 보장
 
-![](https://velog.velcdn.com/images/jws1228/post/738c7dd5-43ed-46d3-acdf-f0683a74a303/image.png)
+![Monitor 활용 코드](https://velog.velcdn.com/images/jws1228/post/738c7dd5-43ed-46d3-acdf-f0683a74a303/image.png)
 
 <p align="center" style=" font-size: 12px;
 color: #999;">1번 방법을 Monitor를 활용하여 구현한 코드</p>

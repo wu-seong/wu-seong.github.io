@@ -11,15 +11,16 @@ tags: [공부 정리]		# TAG는 반드시 소문자로 이루어져야함!
 - register와 메인 메모리 사이에 Cache가 존재하여 이 간극을 줄여준다
 <br><br>
 ## Base and Limit Registers
-![](https://velog.velcdn.com/images/jws1228/post/7a0f6c07-19fd-48c7-98f1-6f25bdd33d03/image.png)
+
+![프로세스의 메모리 공간](https://velog.velcdn.com/images/jws1228/post/7a0f6c07-19fd-48c7-98f1-6f25bdd33d03/image.png)
 
 - 프로세스는 고유 메모리 공간을 갖는다
 - **base(relocation) register와 limit register**가 이 공간을 정의한다
 - user mode에서는 메모리 접근 시 이 공간을 넘지 않도록 항상 확인해야한다
 <br><br>
-## Address Binding
 
-![](https://velog.velcdn.com/images/jws1228/post/f393ba30-ca42-425e-9ed2-37f04d1591b7/image.png)
+## Address Binding
+![address binding 과정](https://velog.velcdn.com/images/jws1228/post/f393ba30-ca42-425e-9ed2-37f04d1591b7/image.png)
 
 1. 컴파일러가 소스코드를 **컴파일**하여 **relocatable address(상대 주소)**정보가 있는 object 파일로 변환시킨다
 2. linker가 여러 object 파일들을 합쳐 **absolute address(절대 주소) **를 부여하고(재배치는 link, load과정에 걸쳐 일어난다) 하나의 single binary executable file로 만든다
@@ -122,7 +123,7 @@ Contiguous memory allocation에서 보편적인 first-fit 방법을 사용할 �
 - 논리적 주소를 물리적 주소로 변환할 때 **Page table**을 이용한다
 - 외부 단편화는 없지만 내부 단편화가 있을 수 있다
 ## page table을 이용한 변환
-![](https://velog.velcdn.com/images/jws1228/post/e14fc38b-55a7-4d18-ae4d-0bdbe8f009ab/image.png)
+![page tdable 변환](https://velog.velcdn.com/images/jws1228/post/e14fc38b-55a7-4d18-ae4d-0bdbe8f009ab/image.png)
 
 논리적 주소를 address space와 page size에 따라 page number, page offset를 나눌 수 있고 이를 page table의 물리적 주소와 나눴던 offset과 결합하면 실제 물리주소를 찾을 수 있다.
 <br><br>
@@ -147,7 +148,7 @@ page table에 접근할 때 1번, 실제 주소에 접근할 때 2번 이를 줄
 
 
 ### Translation look-aside buffers(TLBs)
-![](https://velog.velcdn.com/images/jws1228/post/4b5dbc9e-aeb5-4108-84ef-283e78161428/image.png)
+![TLB](https://velog.velcdn.com/images/jws1228/post/4b5dbc9e-aeb5-4108-84ef-283e78161428/image.png)
 
 - TLB는 CPU에 근접하게 위치한 하드웨어 장치로 레지스터와 같은 접근 속도를 가진다(**caching**)
 - **병렬적**으로 주소를 찾는다
@@ -157,7 +158,7 @@ page table에 접근할 때 1번, 실제 주소에 접근할 때 2번 이를 줄
 <br><br>
 ### Effective Access Time(EAT)
 평균적인 메모리 접근 시간 식을 EAT라 하고 아래는 메모리 접근 시간을 1이라고 했을 때 EAT 식이다
-![](https://velog.velcdn.com/images/jws1228/post/93ca1116-f729-4bc3-80bd-f13dcae4cfc7/image.png)
+![EAT](https://velog.velcdn.com/images/jws1228/post/93ca1116-f729-4bc3-80bd-f13dcae4cfc7/image.png)
 <br><br>
 ### Valid-invalid Bit
 메모리 보호를 위해 page table의 엔트리마다 **valid-invalid 비트**로 주소가 해당 프로세스 내에 있는지의 여부를 알려준다
@@ -172,7 +173,7 @@ page table에 접근할 때 1번, 실제 주소에 접근할 때 2번 이를 줄
 - 간단한 two-level 구조의 경우 outer page table과 innter page table이 1개씩 존재
 - 32비트 컴퓨터의 경우 page offset이 12비트, page number가 각각 10비트씩 차지
 
-![](https://velog.velcdn.com/images/jws1228/post/1021df3f-8925-4d39-9aa8-498f239a849b/image.png)
+![계층적 테이블 페이지](https://velog.velcdn.com/images/jws1228/post/1021df3f-8925-4d39-9aa8-498f239a849b/image.png)
 
 32비트이하의 컴퓨터의 경우에는 적합하지만 그 이상의 비트를 가지는 컴퓨터에는 page table의 계층이 늘어나 한 번 접근하는데 더 많은 메모리 접근을 필요로 하기 때문에 부적합하다
 <br><br>
@@ -181,7 +182,7 @@ page table에 접근할 때 1번, 실제 주소에 접근할 때 2번 이를 줄
 - 속도가 빨라 32비트를 넘는 컴퓨터에서 주로 사용
 
 
-![](https://velog.velcdn.com/images/jws1228/post/609a173f-d8d4-4ebc-b950-6f7fbb335afe/image.png)
+![hashed page table](https://velog.velcdn.com/images/jws1228/post/609a173f-d8d4-4ebc-b950-6f7fbb335afe/image.png)
 
  +**Clustered page tables**
 hash와 유사하지만 1개의 엔트리에 한번에 여러개가 매핑될 수 있는 방법 주소가 많이 흩어져 있을 때 유리하다
@@ -189,7 +190,7 @@ hash와 유사하지만 1개의 엔트리에 한번에 여러개가 매핑될 �
 ## Inverted page tables
 page table에 프로세스 정보를 추가해 하나의 통합된 page table로 물리 메모리에 접근하는 방법이다. 메모리는 적게 차지하지만 검색이 오래걸려 hash table과 같이 사용하는 것이 좋다.
 
-![](https://velog.velcdn.com/images/jws1228/post/cd593cea-2da8-4df1-8324-7b66cb09475f/image.png)
+![inverted page table](https://velog.velcdn.com/images/jws1228/post/cd593cea-2da8-4df1-8324-7b66cb09475f/image.png)
 
 <br><br>
 

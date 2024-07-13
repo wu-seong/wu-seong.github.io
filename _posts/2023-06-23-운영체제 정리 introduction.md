@@ -18,7 +18,7 @@ tags: [공부 정리]		# TAG는 반드시 소문자로 이루어져야함!
 ### 컴퓨터 시스템 구조
     
     
-  ![](https://velog.velcdn.com/images/jws1228/post/2910e559-46ee-40b4-90bb-270538477d85/image.png)
+  ![컴퓨터 시스템 구조](https://velog.velcdn.com/images/jws1228/post/2910e559-46ee-40b4-90bb-270538477d85/image.png)
 
    
 하드웨어 - 운영체제 - 응용 프로그램 - 유저
@@ -66,7 +66,7 @@ tags: [공부 정리]		# TAG는 반드시 소문자로 이루어져야함!
  **local buffer**: 작업한 결과를 저장하는 중간 다리
  
  **register**: 드라이버가 명령한 신호를 받는 부분
-![](https://velog.velcdn.com/images/jws1228/post/dd277190-8779-4581-a5a4-25193a27ef10/image.png)
+![컴퓨터 시스템](https://velog.velcdn.com/images/jws1228/post/dd277190-8779-4581-a5a4-25193a27ef10/image.png)
 
 
 
@@ -115,7 +115,7 @@ ex) DMA(Direct memory access)인터럽트, 외부 인터럽트...
 
 => interrupt를 (buffer size)/(block size)만큼 줄임
 
-![](https://velog.velcdn.com/images/jws1228/post/2b2080f1-54db-41fd-9ea2-2283f2d868eb/image.png)
+![DMA](https://velog.velcdn.com/images/jws1228/post/2b2080f1-54db-41fd-9ea2-2283f2d868eb/image.png)
 
 ---------
 ### 컴퓨터 시스템 구조
@@ -204,7 +204,7 @@ ex) DMA(Direct memory access)인터럽트, 외부 인터럽트...
 #### Dual-Mode
   
 
-![](https://velog.velcdn.com/images/jws1228/post/718f5033-fa8a-4b6a-b5dc-9147d2360fe7/image.png)
+![Dual-Mode](https://velog.velcdn.com/images/jws1228/post/718f5033-fa8a-4b6a-b5dc-9147d2360fe7/image.png)
   
 - OS를 보호하기 위해서 **user mode**와 **kernel mode** 두 개로 나눔
 - user mode는 kernel 모드에 접근하기 위해 **system call**을 이용함

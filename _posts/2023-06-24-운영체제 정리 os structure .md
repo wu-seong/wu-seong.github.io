@@ -8,7 +8,7 @@ tags: [공부 정리]		# TAG는 반드시 소문자로 이루어져야함!
 
 -------
 ## 운영체제 서비스
-![](https://velog.velcdn.com/images/jws1228/post/38431adb-2e96-41af-8618-ecb24be717a1/image.png)
+![운영체제 서비스](https://velog.velcdn.com/images/jws1228/post/38431adb-2e96-41af-8618-ecb24be717a1/image.png)
 
 - 운영체제는 **system call**을 통해 프로그램과 유저에게 service를 제공한다
 
@@ -23,10 +23,10 @@ for OS(itself) - 자원 관리, 기록, 보호 및 보안
 
 * System call은 유저에게 서비스를 사용할 인터페이스를 제공한다
 * 이때 직접 System call을 호출하도록 하는 것이 아니라 API를 제공하여 간접적으로 호출하게 한다.
-![](https://velog.velcdn.com/images/jws1228/post/ba692d52-eaef-4a05-b1f3-c9ed4d5e4495/image.png)
+![System call](https://velog.velcdn.com/images/jws1228/post/ba692d52-eaef-4a05-b1f3-c9ed4d5e4495/image.png)
 위는 유닉스와 리눅스에서 이용되는 헤더 파일의 API의 예시이다 
 
-![](https://velog.velcdn.com/images/jws1228/post/26c1417a-9a9d-4cd4-a7c6-e11f87215072/image.png)
+![System call 동작](https://velog.velcdn.com/images/jws1228/post/26c1417a-9a9d-4cd4-a7c6-e11f87215072/image.png)
 
 운영체제 서비스를 이용하는 과정을 정리하자면 
 
