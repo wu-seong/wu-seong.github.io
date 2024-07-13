@@ -46,7 +46,7 @@ for OS(itself) - 자원 관리, 기록, 보호 및 보안
 
 링커와 로더의 역할을 알기 위해서는 우리가 작성하는 소스코드가 어떻게 실행되는지까지를 알면 좋다.
 
-<image src="https://velog.velcdn.com/images/jws1228/post/44d9567f-e4e2-4f3b-ad74-75ccb74aafde/image.png" width="60%" height="60%" ></image>
+<image src="https://velog.velcdn.com/images/jws1228/post/44d9567f-e4e2-4f3b-ad74-75ccb74aafde/image.png" width="60%" height="60%" alt="링킹, 로딩 과정"></image>
 
 1. 우리가 작성한 소스코드가 컴파일러에 의해서 이진 바이너리 파일로(relocatable object file) 바뀐다.
 2. 링커는 이 파일들을 하나의 실행가능한 파일로 합친다.
@@ -71,7 +71,7 @@ for OS(itself) - 자원 관리, 기록, 보호 및 보안
   
 ### 계층적(Layrered) 구조
 <p style="display:block; width:200px; height:200px; margin:0px auto;">
-<image src="https://velog.velcdn.com/images/jws1228/post/0a1da3ea-463e-4aae-8ab4-f10bfd4193b5/image.png"></image><figcaption style="text-align:center; font-size:15px; color:#808080">OS 계층적 구조 </figcaption>
+<image src="https://velog.velcdn.com/images/jws1228/post/0a1da3ea-463e-4aae-8ab4-f10bfd4193b5/image.png" alt="OS 계층적 구조"></image><figcaption style="text-align:center; font-size:15px; color:#808080">OS 계층적 구조 </figcaption>
   </p>
 
 - 계층적으로 이루어진 구조, 가장 바깥은 **UI** 가장 안쪽은 **hardware**
@@ -80,7 +80,7 @@ for OS(itself) - 자원 관리, 기록, 보호 및 보안
   
 ### Microkernel 구조
   
-<image src="https://velog.velcdn.com/images/jws1228/post/4307beb2-84c0-428d-a752-2c95d77a7292/image.png"  width="60%" height="60%"></image>
+<image src="https://velog.velcdn.com/images/jws1228/post/4307beb2-84c0-428d-a752-2c95d77a7292/image.png"  width="60%" height="60%" alt="OS microkernel 구조"></image>
   <figcaption style="text-align:center; font-size:15px; color:#808080">OS microkernel 구조 </figcaption>
 
 - 가장 핵심적인 기능만 커널에 남기고 나머지는 user-level에서 구현하도록 함

@@ -101,7 +101,7 @@ ex) DMA(Direct memory access)인터럽트, 외부 인터럽트...
 
 **RAM(Random access Memory):** 휘발성 메인 메모리로 DRAM 과 SRAM이 있음
 
-<img src="https://velog.velcdn.com/images/jws1228/post/d3025b4b-45d2-4b02-92ee-88be50f12394/image.png" width="50%" height="50%" ></image>
+<img src="https://velog.velcdn.com/images/jws1228/post/d3025b4b-45d2-4b02-92ee-88be50f12394/image.png" width="50%" height="50%" alt="RAM 요약"></image>
 
 **Bootstrap program:** OS를 메인 메모리에 올리기 위한 시스템 , 비휘발성 
 
@@ -125,7 +125,7 @@ ex) DMA(Direct memory access)인터럽트, 외부 인터럽트...
 
 #### Multiprocessor System
 1. Symmetric multiprocessing
-<image src 	="https://velog.velcdn.com/images/jws1228/post/628d1065-da05-473c-8e9a-3b9e3f0c7a43/image.png" width ="50%" height ="50%" ></image>
+<image src 	="https://velog.velcdn.com/images/jws1228/post/628d1065-da05-473c-8e9a-3b9e3f0c7a43/image.png" width ="50%" height ="50%" alt="Symmetric multiprocessing"></image>
 
 <br/>
    
@@ -142,21 +142,21 @@ ex) DMA(Direct memory access)인터럽트, 외부 인터럽트...
 2. Multicore System
 <br/>
   
-<image src ="https://velog.velcdn.com/images/jws1228/post/50a8712e-1fd1-4892-baf9-1fe27b4bab47/image.png" width = "50%" height = "50%"></image>
+<image src ="https://velog.velcdn.com/images/jws1228/post/50a8712e-1fd1-4892-baf9-1fe27b4bab47/image.png" width = "50%" height = "50%" alt="Multicore System"></image>
 
 <br/>
 - 위의 Symmetric Multiprocessing과 다르게 하나의 칩에 여러개의 cpu가 있다.
 <br/>
 - 따라서 cpu간의 통신이 빠르다
 <br/>
-- 더 적은 전력을 소모한다.
+- 더 적은 전력을 소모한다.s
 <br/>
   
 3. Non-Uniform Memory Access 
   
 <br/>  
 <image src ="https://velog.velcdn.com/images/jws1228/post/dfbab0cb-7b36-4056-811d-776f11c5bba7/image.png
-" width = "70%" ></image>
+" width = "70%" alt="Non-Uniform Memory Access"></image>
 <br/>
   - 각 cpu마다 고유 메모리가 있다.
 <br/>
@@ -171,7 +171,7 @@ ex) DMA(Direct memory access)인터럽트, 외부 인터럽트...
  
     
 <image src ="https://velog.velcdn.com/images/jws1228/post/49e9a6be-48fc-4ecb-8280-7d8e2234e9e5/image.png
-" width = "70%" ></image>
+" width = "70%" alt="Clustered Systems"></image>
 <br/>
  - 여러개의 컴퓨터를 연결하여 만든 하나의 공유 저장소이다.
  <br/>
@@ -189,7 +189,7 @@ ex) DMA(Direct memory access)인터럽트, 외부 인터럽트...
     
 #### Multiprogramming
 
-<image src="https://velog.velcdn.com/images/jws1228/post/90183cd5-8c95-40bc-8e7f-b140ca1bc171/image.png" width="50%"></image>
+<image src="https://velog.velcdn.com/images/jws1228/post/90183cd5-8c95-40bc-8e7f-b140ca1bc171/image.png" width="50%" alt="Multiprogramming"></image>
   
   
 
