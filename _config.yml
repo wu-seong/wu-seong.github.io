@@ -34,7 +34,7 @@ twitter:
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
-  name: your_full_name
+  name: chang wu-seong
   email: example@domain.com # change to your email address
   links:
     # The first element serves as the copyright owner's link
@@ -59,7 +59,7 @@ webmaster_verifications:
 # Web Analytics Settings
 analytics:
   google:
-    id: # fill in your Google Analytics ID
+    id: G-8BVS4SM7BS # fill in your Google Analytics ID
   goatcounter:
     id: # fill in your GoatCounter ID
   umami:
