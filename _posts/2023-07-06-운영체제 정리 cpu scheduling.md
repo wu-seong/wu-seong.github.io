@@ -138,7 +138,7 @@ color: #999;">multilevel queue</p>
 
 ### Asymmetric/ Symmetric multiprocessing
 
-![](https://velog.velcdn.com/images/jws1228/post/5fd390ab-d733-4bf3-80f4-1497734bf0c8/image.png)
+![multiple-processor에서의 두 가지 전략](https://velog.velcdn.com/images/jws1228/post/5fd390ab-d733-4bf3-80f4-1497734bf0c8/image.png)
 <p align="center" style=" font-size: 12px;
 color: #999;">	multiple-processor에서의 두 가지 전략</p>
 
@@ -150,7 +150,7 @@ symmetric multiprocessing: 각각의 프로세서가 자신의 큐에서 스케�
 - 최근에는 더 빠르고 전력소모가 적은 **멀티코어**를 많이 사용한다
 - 동시에 각각의 코어에 내장된 **하드웨어 스레드**도 많이 사용한다
 
-![](https://velog.velcdn.com/images/jws1228/post/b6962be4-da0b-4931-933c-43bd192eeee7/image.png)
+![Multithreaded multicore system을 이용하여 Memory stall을 해결](https://velog.velcdn.com/images/jws1228/post/b6962be4-da0b-4931-933c-43bd192eeee7/image.png)
 <p align="center" style=" font-size: 12px;
 color: #999;"> Multithreaded multicore system을 이용하여 Memory stall을 해결</p>
 
@@ -159,8 +159,8 @@ color: #999;"> Multithreaded multicore system을 이용하여 Memory stall을 �
 <br><br>
 ### Two levels of scheduling
 
-![](https://velog.velcdn.com/images/jws1228/post/4b95aa86-27be-43bf-8227-9cbc067a76b8/image.png)
-<p align="center" style=" font-size: 12px; color: #999;">	Two levels of scheduling</p>
+![Two levels of scheduling](https://velog.velcdn.com/images/jws1228/post/4b95aa86-27be-43bf-8227-9cbc067a76b8/image.png)
+<p align="center" style=" font-size: 12px; color: #999;">Two levels of scheduling</p>
 
 - **Multithreaded multicore processor**는 물리적 하드웨어가 존재하기 때문에 두 번의 schduling을 거쳐야 한다. 
 - level1이 기존의 thread를 스케줄링하는 것이고
@@ -183,8 +183,9 @@ color: #999;"> Multithreaded multicore system을 이용하여 Memory stall을 �
 **hard affinity:** 시스템 콜을 사용하여 프로세스를 실행할 CPU에 바인딩 되는 경우
 <br><br>
 ### NUMA
-![](https://velog.velcdn.com/images/jws1228/post/327cd795-d634-46ae-b801-d80a901b02f3/image.png)
-<p align="center" style=" font-size: 12px; color: #999;">	NUMA 구조</p>
+
+![NUMA 구조](https://velog.velcdn.com/images/jws1228/post/327cd795-d634-46ae-b801-d80a901b02f3/image.png)
+<p align="center" style=" font-size: 12px; color: #999;">NUMA 구조</p>
 
 \- NUMA의 구조자체가 Affinity가 보장이 되는 구조임
 <br><br>
@@ -208,8 +209,8 @@ ex) ARM processor의 big.LITTLE
 
 \- real-time은 반응속도가 매우 중요하여 Latency를 최소화 시키는 것이 관건이다
 
-![](https://velog.velcdn.com/images/jws1228/post/544b3642-13a8-4a01-a490-010d4e053d45/image.png)
-<p align="center" style=" font-size: 12px; color: #999;">	event 처리 과정</p>
+![event 처리 과정](https://velog.velcdn.com/images/jws1228/post/544b3642-13a8-4a01-a490-010d4e053d45/image.png)
+<p align="center" style=" font-size: 12px; color: #999;">event 처리 과정</p>
 
 
 **Event latency:** 이벤트가 일어나고 이 이벤트에 대한 반응이 일어나기 까지의 시간
@@ -222,7 +223,7 @@ ex) ARM processor의 big.LITTLE
 <br><br>
 
 ### priority-based Scheduling
-![](https://velog.velcdn.com/images/jws1228/post/d9ba78fb-9ca5-44af-9ef8-5c98adf02345/image.png)
+![priority-based Scheduling](https://velog.velcdn.com/images/jws1228/post/d9ba78fb-9ca5-44af-9ef8-5c98adf02345/image.png)
 
 - real-time scheduling은 선점적이고 우선순위를 기반으로 한 스케줄링 기법을 사용해야한다
 - 주기적으로 발생하는 작업을 먼저 고려하여, 이 작업들을 예측 가능한 주기와 패턴 내에서 처리하기 위한 방법을 사용한다.
@@ -249,7 +250,7 @@ ex) p1 = 50, t1=20 / p2=100, t2=35
 ### EDF(Earliest Deadline First)
 - 각 주기의 시작마다 deadline을 비교하여 우선순위를 정하는 방법
 - CPU Utilization이 100%보다 작기만 하면 된다
-![](https://velog.velcdn.com/images/jws1228/post/5fbd5e19-ecc7-43ca-b01a-38b2a0c3ed6c/image.png)
+![EDF](https://velog.velcdn.com/images/jws1228/post/5fbd5e19-ecc7-43ca-b01a-38b2a0c3ed6c/image.png)
 <br><br>
 ### Propotional Share
 
