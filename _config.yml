@@ -97,7 +97,7 @@ theme_mode: # [light | dark]
 
 
 # the avatar on sidebar, support local or CORS resources
-avatar: /%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%91%E1%85%B5%E1%86%AF+%E1%84%89%E1%85%A1%E1%84%8C%E1%85%B5%E1%86%AB.jpeg
+avatar: /assets/images/profile/프로필 사진.jpeg
 
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.
 # It can be overridden by a customized `page.image` in front matter.
