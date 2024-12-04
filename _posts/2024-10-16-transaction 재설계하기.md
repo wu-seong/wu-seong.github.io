@@ -5,6 +5,7 @@ categories: [project, 탐식당]
 tags: [공부 정리, 트러블 슈팅]	# TAG는 반드시 소문자로 이루어져야함!
 image: /assets/img/2024-10-11/thumbnail.jpeg
 ---
+
 <style>
   figcaption {
     font-size: 14px;
