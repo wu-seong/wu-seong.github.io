@@ -3,6 +3,7 @@ title: 정보의 일관성을 고려하여 Transaction 재설계하기
 date: 2024-10-16 00:00:00 +/- TTTT
 categories: [project, 탐식당]
 tags: [공부 정리, 트러블 슈팅]	# TAG는 반드시 소문자로 이루어져야함!
+image: /assets/img/2024-10-11/thumbnail.jpeg
 ---
 <style>
   figcaption {
