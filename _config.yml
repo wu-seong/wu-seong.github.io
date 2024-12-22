@@ -16,7 +16,7 @@ timezone: Asia/Seoul
 
 title: Wuslog # the main title
 
-tagline: 고생해서 남 주기 좋아합니다. # it will display as the sub-title
+tagline: 깊게 원리를 이해하며 알아가는 것을 좋아합니다. # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
   A minimal, responsive and feature-rich Jekyll theme for technical writing.
