@@ -26,6 +26,22 @@ published: true
 
 최근 프로젝트를 진행하면서 특정 화면의 로딩이 매우 오래 걸리는 것을 발견했다. 페이지를 로딩하는데 거의 4~5초 정도 걸리는 듯 했다. 초반에는 이러지 않았지만, 데이터가 쌓이면서 API 응답 속도가 느려진 듯 하다.
 
+해당 API에서 접근하는 DB 정보는 대략적으로 다음과 같다.
+
+<figure>
+    <img src="/assets/img/2025-12-19/img3.png" width="100%" alt="주요 스키마">
+    <figcaption>주요 스키마, 연관관계만 표시했다.</figcaption>
+</figure>
+
+**핵심 테이블 구조:**
+- `facilies`: 모니터링 대상 설비 정보 (예: CRAC, 서버, UPS 등)
+- `facility_metric_definitions`: 측정 가능한 메트릭 정의 (예: 온도, 습도, 전력 등)
+- `facility_metric_data`: 실제 측정된 데이터 (시계열 데이터, n분마다 수집)
+
+**데이터 특징:**
+- 하나의 설비(facility)는 여러 메트릭을 가짐   
+- 각 메트릭은 시간에 따라 계속 누적됨 (시계열)
+
 ---
 
 ## 병목 지점 파악
@@ -358,6 +374,7 @@ Execution Time: 0.287 ms
 실행 계획을 분석하면서 기존에 잘 몰랐던 Postgresql 메모리 구조나 join, sort 구현 방법 등에 대해서도 깊게 이해하는 계기가 되어 좋은 경험이라고 생각한다.
 
 앞으로도 slow 쿼리를 발견할 시에는 잘 해결할 수 있을 것 같다.
+
 ---
 
 ## 참고자료
@@ -367,6 +384,6 @@ Execution Time: 0.287 ms
 - [PostgreSQL SELECT Documentation](http://postgresql.org/docs/current/sql-select.html#SQL-FROM)
 - [seungtaek-overflow - [PG] 쿼리 실행 계획 분석하기 - Table Scan](https://seungtaek-overflow.tistory.com/5)
 
-## 아무말
+---
 
-GPT 썸네일 이미지 잘 만드는 듯 하면서 뭔가 촌스럽네..
+P.S. GPT 썸네일 이미지 잘 만드는 듯 하면서 뭔가 촌스럽네..
