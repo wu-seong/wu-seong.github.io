@@ -381,7 +381,7 @@ Execution Time: 0.287 ms
 
 - [TypeORM Configuration](https://typeorm.io/docs/data-source/data-source-options)
 - [PostgreSQL Internals](https://www.interdb.jp/pg/pgsql02/02.html)
-- [PostgreSQL SELECT Documentation](http://postgresql.org/docs/current/sql-select.html#SQL-FROM)
+- [PostgreSQL SELECT Documentation](https://postgresql.org/docs/current/sql-select.html#SQL-FROM)
 - [seungtaek-overflow - [PG] 쿼리 실행 계획 분석하기 - Table Scan](https://seungtaek-overflow.tistory.com/5)
 
 ---
