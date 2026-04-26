@@ -3,7 +3,7 @@ title: "삭제를 Delete 쿼리 한 줄로 끝낼 수 없는 이유"
 date: 2026-04-22 00:00:00 +/- TTTT
 categories: [백엔드]
 tags: [jpa, spring, database, cascade]	# TAG는 반드시 소문자로 이루어져야함!
-image: /assets/img/2026-04-22/thumnail.png
+image: /assets/img/2026-04-22/thumbnail.png
 published: true
 
 ---
