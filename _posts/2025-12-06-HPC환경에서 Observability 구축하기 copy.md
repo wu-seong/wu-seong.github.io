@@ -1,7 +1,7 @@
 ---
 title: "HPC환경에서 Observability 구축하기"
 date: 2025-11-14 00:00:00 +/- TTTT
-categories: [오픈소스, kubetail]
+categories: [오픈소스]
 tags: [Open Source,kubetail]	# TAG는 반드시 소문자로 이루어져야함!
 image: /assets/img/2025-10-21/img0.png
 published: false

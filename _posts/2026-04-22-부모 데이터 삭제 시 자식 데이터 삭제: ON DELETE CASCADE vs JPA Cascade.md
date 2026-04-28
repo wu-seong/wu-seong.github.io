@@ -1,7 +1,7 @@
 ---
 title: "삭제를 Delete 쿼리 한 줄로 끝낼 수 없는 이유"
 date: 2026-04-22 00:00:00 +/- TTTT
-categories: [백엔드]
+categories: [백엔드, 설계]
 tags: [jpa, spring, database, cascade]	# TAG는 반드시 소문자로 이루어져야함!
 image: /assets/img/2026-04-22/thumbnail.png
 published: true
@@ -58,7 +58,7 @@ published: true
 
 <figure>
     <img src="/assets/img/2026-04-22/img3.png" width="100%" alt="soft delete vs hard delete">
-    <figcaption>soft delete는 deleted_at만 찍고 row를 남기기 때문에, DB CASCADE(hard delete)와 충돌한다</figcaption>
+    <figcaption></figcaption>
 </figure>
 
 따라서 우리는 데이터를 **논리적**으로 삭제해야한다.
