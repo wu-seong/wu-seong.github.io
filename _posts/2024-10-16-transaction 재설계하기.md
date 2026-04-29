@@ -4,6 +4,7 @@ date: 2024-10-16 00:00:00 +/- TTTT
 categories: [백엔드, 설계]
 tags: [공부 정리, 트러블 슈팅]	# TAG는 반드시 소문자로 이루어져야함!
 image: /assets/img/2024-10-11/thumbnail.jpeg
+description: 탐식당 이미지 업로드 오류를 파고들며 트랜잭션을 재설계한 과정과, 좋은 트랜잭션 설계의 원칙을 정리했다.
 ---
 
 <style>

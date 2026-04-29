@@ -5,6 +5,7 @@ categories: [오픈소스]
 tags: [Open Source,kubetail]	# TAG는 반드시 소문자로 이루어져야함!
 image: /assets/img/2025-10-21/img0.png
 published: false
+description: 레거시 Alert 시스템을 이벤트 기반 아키텍처로 개선하면서 고민했던 설계 결정들을 정리했다.
 
 ---
 <style>

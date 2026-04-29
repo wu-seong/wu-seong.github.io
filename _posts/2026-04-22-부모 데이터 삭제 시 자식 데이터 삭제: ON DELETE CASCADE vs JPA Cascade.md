@@ -4,6 +4,7 @@ date: 2026-04-22 00:00:00 +/- TTTT
 categories: [백엔드, 설계]
 tags: [jpa, spring, database, cascade]	# TAG는 반드시 소문자로 이루어져야함!
 image: /assets/img/2026-04-22/thumbnail.png
+description: 삭제는 단순히 DELETE 쿼리 하나가 아니다. 복구 가능성, 연쇄 삭제, ON DELETE CASCADE와 JPA Cascade의 차이까지 — 데이터를 지운다는 것의 의미를 설계 관점에서 정리했다.
 published: true
 
 ---

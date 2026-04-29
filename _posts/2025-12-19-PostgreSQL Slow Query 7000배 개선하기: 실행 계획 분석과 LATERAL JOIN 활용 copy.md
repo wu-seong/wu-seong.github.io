@@ -5,6 +5,7 @@ categories: [백엔드, 트러블슈팅]
 tags: [postgresql, performance]	# TAG는 반드시 소문자로 이루어져야함!
 image: /assets/img/2025-12-19/img0.png
 published: true
+description: slow query를 발견하고 Postgresql의 실행 계획을 통해 문제점을 찾아 개선시킨 경험을 기록합니다.
 
 ---
 <style>
