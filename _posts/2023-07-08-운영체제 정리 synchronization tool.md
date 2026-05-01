@@ -1,6 +1,7 @@
 ---
 title: 운영체제 정리 - Synchronization Tool
 date: 2023-07-08 00:00:00 +/- TTTT
+slug: os-synchronization-tool
 categories: [CS, 운영체제]
 tags: [공부 정리]		# TAG는 반드시 소문자로 이루어져야함!
 description: Race Condition 문제부터 Critical Section, Mutex Lock, 세마포어, 모니터까지 동기화 도구의 개념과 원리를 정리했다.

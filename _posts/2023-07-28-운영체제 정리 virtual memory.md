@@ -1,6 +1,7 @@
 ---
 title: 운영체제 정리 - Virtual Memory
 date: 2023-07-28 00:00:00 +/- TTTT
+slug: os-virtual-memory
 categories: [CS, 운영체제]
 tags: [공부 정리]		# TAG는 반드시 소문자로 이루어져야함!
 description: 가상 메모리의 필요성, Demand Paging, Page Fault 처리 흐름, 페이지 교체 알고리즘(FIFO, LRU 등)을 정리했다.

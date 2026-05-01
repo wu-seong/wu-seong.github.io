@@ -1,6 +1,7 @@
 ---
 title: 운영체제 정리 - OS Structures
 date: 2023-06-24 00:00:00 +/- TTTT
+slug: os-structure
 categories: [CS, 운영체제]
 tags: [공부 정리]		# TAG는 반드시 소문자로 이루어져야함!
 description: 운영체제 서비스, System Call의 동작 원리, 모놀리식·마이크로커널 등 커널 구조의 차이를 정리했다.

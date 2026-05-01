@@ -1,6 +1,7 @@
 ---
 title: 운영체제 정리 - CPU Scheduling
 date: 2023-07-06 00:00:00 +/- TTTT
+slug: os-cpu-scheduling
 categories: [CS, 운영체제]
 tags: [공부 정리]		# TAG는 반드시 소문자로 이루어져야함!
 description: CPU 이용률 극대화를 위한 스케줄링 목표와 FCFS, SJF, RR, Priority 등 다양한 스케줄링 알고리즘을 정리했다.

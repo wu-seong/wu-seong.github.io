@@ -1,6 +1,7 @@
 ---
 title: 운영체제 정리 - Main Memory
 date: 2023-07-18 00:00:00 +/- TTTT
+slug: os-main-memory
 categories: [CS, 운영체제]
 tags: [공부 정리]		# TAG는 반드시 소문자로 이루어져야함!
 description: 메모리 주소 바인딩 과정, 페이징 기법, 세그멘테이션, TLB를 활용한 메인 메모리 관리 방식을 정리했다.

@@ -1,6 +1,7 @@
 ---
 title: "PostgreSQL Slow Query 7000배 개선하기: 실행 계획 분석과 LATERAL JOIN 활용"
 date: 2025-12-19 00:00:00 +/- TTTT
+slug: postgresql-slow-query-7000x
 categories: [백엔드, 트러블슈팅]
 tags: [postgresql, performance]	# TAG는 반드시 소문자로 이루어져야함!
 image: /assets/img/2025-12-19/img0.png

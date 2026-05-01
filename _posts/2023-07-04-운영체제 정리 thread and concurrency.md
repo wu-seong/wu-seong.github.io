@@ -1,6 +1,7 @@
 ---
 title: 운영체제 정리 - Thread&Concurrency
 date: 2023-07-04 00:00:00 +/- TTTT
+slug: os-thread-and-concurrency
 categories: [CS, 운영체제]
 tags: [공부 정리]		# TAG는 반드시 소문자로 이루어져야함!
 description: Thread의 개념과 구성요소, 멀티 스레드의 장점, 유저 스레드·커널 스레드 및 멀티스레딩 모델을 정리했다.

@@ -1,6 +1,7 @@
 ---
 title: "레거시 Alert 시스템을 이벤트 기반으로 개선하며 배운 것"
 date: 2025-12-14 00:00:00 +/- TTTT
+slug: event-driven-alert-system
 categories: [오픈소스]
 tags: [Open Source,kubetail]	# TAG는 반드시 소문자로 이루어져야함!
 image: /assets/img/2025-10-21/img0.png

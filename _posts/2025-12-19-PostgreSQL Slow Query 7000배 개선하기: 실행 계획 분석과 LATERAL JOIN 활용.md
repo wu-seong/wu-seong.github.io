@@ -1,6 +1,7 @@
 ---
 title: "Swagger 작동원리 모르면 들어오세요"
 date: 2025-01-17 00:00:00 +/- TTTT
+slug: swagger-internals
 categories: [백엔드, 트러블슈팅]
 tags: [postgresql, performance]	# TAG는 반드시 소문자로 이루어져야함!
 image: /assets/img/2025-12-19/img0.png

@@ -1,6 +1,7 @@
 ---
 title: 운영체제 정리 - Synchronization Examples
 date: 2023-07-12 00:00:00 +/- TTTT
+slug: os-synchronization-examples
 categories: [CS, 운영체제]
 tags: [공부 정리]		# TAG는 반드시 소문자로 이루어져야함!
 description: Bounded-Buffer, Readers-Writers, Dining Philosophers 등 고전적인 동기화 문제와 세마포어를 활용한 해결 방법을 정리했다.

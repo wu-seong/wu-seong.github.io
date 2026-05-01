@@ -6,7 +6,7 @@ theme: jekyll-theme-chirpy
 # The language of the webpage › http://www.lingoes.net/en/translator/langcode.htm
 # If it has the same name as one of the files in folder `_data/locales`, the layout language will also be changed,
 # otherwise, the layout language will use the default value of 'en'.
-lang: en
+lang: ko
 
 # Change to your timezone › https://kevinnovak.github.io/Time-Zone-Picker
 timezone: Asia/Seoul
@@ -19,7 +19,7 @@ title: Wuslog # the main title
 tagline: 깊게 원리를 이해하며 알아가는 것을 좋아합니다. # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
-  A minimal, responsive and feature-rich Jekyll theme for technical writing.
+  백엔드 개발, 운영체제, 알고리즘, 아키텍처 설계 등 깊게 원리를 이해하며 공부한 것들을 기록하는 기술 블로그입니다.
 
 # Fill in the protocol & hostname for your site.
 # e.g. 'https://username.github.io', note that it does not end with a '/'.
@@ -38,7 +38,7 @@ social:
   email: jws001228@naver.com # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    - https://github.com/username # change to your github homepage
+    - https://github.com/wu-seong
     # Uncomment below to add more social links
     - https://www.linkedin.com/in/우성-장-0289792a6/
 
@@ -59,7 +59,7 @@ analytics:
   google:
     id: G-8BVS4SM7BS # fill in your Google Analytics ID
   goatcounter:
-    id: # fill in your GoatCounter ID
+    id: wuslog
   umami:
     id: # fill in your Umami ID
     domain: # fill in your Umami domain
@@ -71,7 +71,7 @@ analytics:
 
 # Pageviews settings
 pageviews:
-  provider: # now only supports 'goatcounter'
+  provider: goatcounter
 
 # Prefer color scheme setting.
 #
